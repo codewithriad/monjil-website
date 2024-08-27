@@ -1,3 +1,4 @@
+import Footer from "../Shared/Footer/Footer"
 import Navbar from "../Shared/Navbar/Navbar"
 import About from "../pages/About/About"
 import Hero from "../pages/Hero/Hero"
@@ -10,7 +11,7 @@ const Main = () => {
         <Hero/>
         <About />
         <Service/>
-        {/* <Footer/> */}
+        <Footer/>
 
     </div>
   )
