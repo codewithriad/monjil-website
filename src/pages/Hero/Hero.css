@@ -1,0 +1,38 @@
+.hero-image {
+  object-fit: cover;
+  object-position: top;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: border_animation 5s infinite ease-in-out;
+}
+@keyframes border_animation {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  25% {
+    border-radius: 58% 52% 75% 25% / 76% 46% 54% 25%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.2);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+}
+
+.hero-button {
+  position: relative;
+}
+button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+button span::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 25px;
+  background-color: var(--primary-color);
+}

@@ -1,0 +1,24 @@
+@media (max-width: 1024px) {
+  .aboutContainer {
+    flex-direction: column-reverse;
+  }
+  .aboutContainer .aboutTitle {
+    margin-top: 3rem;
+  }
+  .textCircle {
+    width: 12rem;
+    height: 12rem;
+    left: -5rem;
+    bottom: -3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .textCircle {
+    left: 0;
+    bottom: 0;
+  }
+  .textCircle h3 span {
+    font-size: 3rem;
+  }
+}

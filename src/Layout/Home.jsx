@@ -1,0 +1,19 @@
+import Navbar from "../Shared/Navbar/Navbar"
+import About from "../pages/About/About"
+import Hero from "../pages/Hero/Hero"
+import Service from "../pages/Service/Service"
+
+const Main = () => {
+  return (
+    <div>
+        <Navbar/>
+        <Hero/>
+        <About />
+        <Service/>
+        {/* <Footer/> */}
+
+    </div>
+  )
+}
+
+export default Main
