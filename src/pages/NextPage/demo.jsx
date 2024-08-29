@@ -1,15 +1,15 @@
 import {
-    Tab,
-    TabPanel,
-    Tabs,
-    TabsBody,
-    TabsHeader,
+  Tab,
+  TabPanel,
+  Tabs,
+  TabsBody,
+  TabsHeader,
 } from "@material-tailwind/react";
 import Card from "../../Shared/Components/Card/Card";
   
   
   
-  const Service = () => {
+  const Demo = () => {
     const data = [
       {
         label: "Motion",
@@ -112,4 +112,4 @@ import Card from "../../Shared/Components/Card/Card";
     );
   };
   
-  export default Service;
+  export default Demo;
