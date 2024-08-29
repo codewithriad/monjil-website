@@ -5,7 +5,6 @@ import {
   TabsBody,
   TabsHeader,
 } from "@material-tailwind/react";
-import Card from "../../Shared/Components/Card/Card";
   
   
   
@@ -100,7 +99,7 @@ import Card from "../../Shared/Components/Card/Card";
                 <TabPanel key={value} value={value}>
                   <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-4 space-y-4">
                     {images.map((image, index) => (
-                      <Card key={index} image={image} />
+                      // <CardComponent />
                     ))}
                   </div>
                 </TabPanel>

@@ -1,0 +1,63 @@
+/* .cardContainer {
+  position: relative;
+  margin: 1.25rem 0;
+  width: 18.75rem;
+  height: 25rem;
+  background: var(--primary-color);
+  transform-style: preserve-3d;
+  transform: perspective(125rem);
+  box-shadow: inset 18.75rem 0 3.125rem rgba(0, 0, 0, 0.5),
+    0 1.25rem 1.25rem rgba(0, 0, 0, 0.5);
+  transition: 1s;
+} */
+.card {
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+    0 20px 20px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+.card:hover {
+  z-index: 10000;
+  transform: perspective(2000px) rotate(-10deg);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.card .Box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  position: relative;
+  transform-origin: left;
+  z-index: 1;
+  transition: 1s cubic-bezier(0.15, 1.7, 0.84, 0.58);
+  background: #111;
+}
+.card .Box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+.card:hover .Box,
+.card:hover .Box img {
+  transform: rotateY(-135deg);
+}
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: -1;
+}

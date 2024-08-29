@@ -1,144 +1,237 @@
-import { Tab, Tabs, TabsHeader } from "@material-tailwind/react";
+import { useState } from "react";
+import CardComponent from "../../Shared/Components/CardComponent/CardComponent";
 import "./service.css";
 
 const Service = () => {
-  const data = [
-    {
-      label: "Motion",
-      value: "Motion",
-      images: [
-        "https://i.ibb.co/5YywmzK/about.jpg",
-        "https://i.ibb.co/5xCHkd5/hero.png",
-        "https://i.ibb.co/1sZ0NZ2/1.jpg",
-        "https://i.ibb.co/hYQXDnV/2.jpg",
-      ],
-    },
-    {
-      label: "Premium Pro",
-      value: "Premium Pro",
-      images: [
-        "https://i.ibb.co/N9Wg9Qp/hero.jpg",
-        "https://i.ibb.co/5YywmzK/about.jpg",
-        "https://i.ibb.co/5xCHkd5/hero.png",
-        "https://i.ibb.co/1sZ0NZ2/1.jpg",
-        "https://i.ibb.co/hYQXDnV/2.jpg",
-      ],
-    },
-  ];
+  const [selectedTab, setSelectedTab] = useState([
+    "Motion",
+    "Premium Pro",
+    "Photoshop",
+    "Adobe XD",
+    "Illustrator",
+    "Indesign",
+  ]);
+
+  const data = {
+    motionData: [
+      {
+        src: "https://i.ibb.co/N9Wg9Qp/hero.jpg",
+        alt: "Hero Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5YywmzK/about.jpg",
+        alt: "About Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+    ],
+    photoshopData: [
+      {
+        src: "https://i.ibb.co/N9Wg9Qp/hero.jpg",
+        alt: "Hero Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5YywmzK/about.jpg",
+        alt: "About Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5xCHkd5/hero.png",
+        alt: "Hero Image 2",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+    ],
+
+    adobexdData: [
+      {
+        src: "https://i.ibb.co/N9Wg9Qp/hero.jpg",
+        alt: "Hero Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5YywmzK/about.jpg",
+        alt: "About Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5xCHkd5/hero.png",
+        alt: "Hero Image 2",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+    ],
+    illustratorData: [
+      {
+        src: "https://i.ibb.co/N9Wg9Qp/hero.jpg",
+        alt: "Hero Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5YywmzK/about.jpg",
+        alt: "About Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5xCHkd5/hero.png",
+        alt: "Hero Image 2",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+    ],
+
+    indesignData: [
+      {
+        src: "https://i.ibb.co/N9Wg9Qp/hero.jpg",
+        alt: "Hero Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+        
+      },
+      {
+        src: "https://i.ibb.co/5YywmzK/about.jpg",
+        alt: "About Image",
+
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5xCHkd5/hero.png",
+        alt: "Hero Image 2",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+        
+      },
+    ],
+    premiumProData: [
+      {
+        src: "https://i.ibb.co/N9Wg9Qp/hero.jpg",
+        alt: "Hero Image",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5YywmzK/about.jpg",
+        alt: "About Image",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+      {
+        src: "https://i.ibb.co/5xCHkd5/hero.png",
+        alt: "Hero Image 2",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing. Cum soc etras natoque penat bid id in reprehenderit in voluptate velit esse",
+      },
+    ],
+  };
+
   return (
-    <>
+    <div className="bg-bg-color pt-4">
       <div className="bg-bg-color py-6">
         <h2 className="text-primary-color text-center pt-4 text-3xl font-semibold">
           What I do
         </h2>
       </div>
-      <Tabs>
-        <TabsHeader>
-          {data.map(({ label, value }) => (
-            <Tab key={value} value={value}>
-              {label}
-            </Tab>
-          ))}
-        </TabsHeader>
-      </Tabs>
-      <div className="bg-bg-color max-w-full lg:px-[12%] grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
-        <div className="card">
-          <div className="Box">
-            <img src="https://images.pexels.com/photos/594610/pexels-photo-594610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-          </div>
-          <div className="details">
-            <h2>Lorem ipsum dolor</h2>
-            <p>
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.{" "}
-            </p>
-          </div>
-        </div>
 
-        <div className="card">
-          <div className="Box">
-            <img src="https://images.pexels.com/photos/3699319/pexels-photo-3699319.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-          </div>
-          <div className="details">
-            <h2>Lorem ipsum dolor</h2>
-            <p>
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.{" "}
-            </p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="Box">
-            <img src="https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-          </div>
-          <div className="details">
-            <h2>Lorem ipsum dolor</h2>
-            <p>
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.{" "}
-            </p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="Box">
-            <img src="https://images.pexels.com/photos/3699319/pexels-photo-3699319.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-          </div>
-          <div className="details">
-            <h2>Lorem ipsum dolor</h2>
-            <p>
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.{" "}
-            </p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="Box">
-            <img src="https://images.pexels.com/photos/594610/pexels-photo-594610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-          </div>
-          <div className="details">
-            <h2>Lorem ipsum dolor</h2>
-            <p>
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.{" "}
-            </p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="Box">
-            <img src="https://images.pexels.com/photos/3699319/pexels-photo-3699319.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-          </div>
-          <div className="details">
-            <h2>Lorem ipsum dolor</h2>
-            <p>
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.{" "}
-            </p>
-          </div>
-        </div>
+      <div className="tabs flex justify-center items-center gap-4 text-text-color">
+        <button onClick={() => setSelectedTab("Premium Pro")}>
+          Premium Pro
+        </button>
+        <button onClick={() => setSelectedTab("Motion")}>Motion</button>
+        <button onClick={() => setSelectedTab("Photoshop")}>Photoshop</button>
+        <button onClick={() => setSelectedTab("Adobe XD")}>Adobe XD</button>
+        <button onClick={() => setSelectedTab("Illustrator")}>
+          Illustrator
+        </button>
+        <button onClick={() => setSelectedTab("Indesign")}>Indesign</button>
       </div>
-    </>
+
+      {selectedTab === "Premium Pro" && (
+        <div className="image-gallery flex justify-center flex-wrap gap-5">
+          {data.premiumProData.map((image, index) => (
+            <CardComponent
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              // title={image.title}
+              description={image.description}
+              style={image.style}
+            />
+          ))}
+        </div>
+      )}
+      {selectedTab === "Motion" && (
+        <div className="image-gallery flex justify-center flex-wrap gap-5">
+          {data.motionData.map((image, index) => (
+            <CardComponent
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              // title={image.title}
+              description={image.description}
+              style={image.style}
+            />
+          ))}
+        </div>
+      )}
+      {selectedTab === "Photoshop" && (
+        <div className="image-gallery flex justify-center flex-wrap gap-5">
+          {data.photoshopData.map((image, index) => (
+            <CardComponent
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              // title={image.title}
+              description={image.description}
+              style={image.style}
+            />
+          ))}
+        </div>
+      )}
+      {selectedTab === "Adobe XD" && (
+        <div className="image-gallery flex justify-center flex-wrap gap-5">
+          {data.adobexdData.map((image, index) => (
+            <CardComponent
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              // title={image.title}
+              description={image.description}
+              style={image.style}
+            />
+          ))}
+        </div>
+      )}
+      {selectedTab === "Illustrator" && (
+        <div className="image-gallery flex justify-center flex-wrap gap-5">
+          {data.illustratorData.map((image, index) => (
+            <CardComponent
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              // title={image.title}
+              description={image.description}
+              style={image.style}
+            />
+          ))}
+        </div>
+      )}
+      {selectedTab === "Indesign" && (
+        <div className="image-gallery flex justify-center flex-wrap gap-5">
+          {data.indesignData.map((image, index) => (
+            <CardComponent
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              // title={image.title}
+              description={image.description}
+              style={image.style}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
